@@ -34,6 +34,15 @@ class CreditCheckTest < Minitest::Test
     assert_equal [3, 8, 5, 0, 5, 4, 7, 14, 4, 10, 3, 14, 9, 4, 9, 8], credit_check.add_digits_over_ten
   end
 
+  def test_sum
+    credit_check = CreditCheck.new
+    assert_equal 107, credit_check.sum
+  end
+
+  def test_final_sum
+    credit_check = CreditCheck.new
+    assert_equal "This number is not valid!", credit_check.module_of_ten
+  end
 
 
 

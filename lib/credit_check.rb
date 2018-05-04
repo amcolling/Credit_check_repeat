@@ -34,6 +34,18 @@ class CreditCheck
     end
   end
 
+  def sum
+    add_digits_over_ten.sum
+  end
+
+  def module_of_ten
+    if sum % 10 == 0
+        p "This number is valid!"
+      else
+        p "This number is not valid!"
+    end
+  end
+
 
 
 
