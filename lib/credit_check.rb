@@ -6,10 +6,6 @@ class CreditCheck
     @cc_number = "4929735477250543"
   end
 
-  def convert_to_array
-    @cc_number.chars
-  end
-
   def reverse_array
     @cc_number.to_i.digits
   end
