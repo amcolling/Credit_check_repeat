@@ -26,7 +26,12 @@ class CreditCheckTest < Minitest::Test
 
   def test_doubled
     credit_check = CreditCheck.new
-    assert_equal [3, 8, 5, 0, 5, 4, 7, 14, 4, 10, 3, 14, 9, 4, 9, 8], credit_check.doubled
+    assert_equal [3, 8, 5, 0, 5, 4, 7, 14, 4, 10, 3, 14, 9, 4, 9, 8], credit_check.doubled_every_other
+  end
+
+  def test_add_digits_over_ten
+    credit_check = CreditCheck.new
+    assert_equal [3, 8, 5, 0, 5, 4, 7, 14, 4, 10, 3, 14, 9, 4, 9, 8], credit_check.add_digits_over_ten
   end
 
 

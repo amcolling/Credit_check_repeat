@@ -14,7 +14,7 @@ class CreditCheck
     @cc_number.to_i.digits
   end
 
-  def doubled
+  def doubled_every_other
     reverse_array.map.with_index do |digit, index|
       if index.odd? == true
         digit * 2
@@ -23,6 +23,17 @@ class CreditCheck
       end
     end
   end
+
+  def add_digits_over_ten
+    doubled_every_other do |digit|
+      if digit > 9
+        digit.array.sum
+      else
+        digit
+      end
+    end
+  end
+
 
 
 
