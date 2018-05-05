@@ -2,8 +2,8 @@
 class CreditCheck
   attr_reader :cc_number
 
-  def initialize
-    @cc_number = "4929735477250543"
+  def initialize(cc_number)
+    @cc_number = cc_number
   end
 
   def reverse_array
