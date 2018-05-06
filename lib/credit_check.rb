@@ -41,10 +41,4 @@ class CreditCheck
       p "This number is not valid!"
     end
   end
-
-
-
-
-
-
 end
